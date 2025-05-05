@@ -5,9 +5,10 @@ import { CounterContext } from './context/Counter'
 
 function App() {
   const counterState = useContext(CounterContext);
+  console.log('context', counterState)
   return (
     <>
-    <h1>Count 0</h1>
+    <h1>Count is {counterState.count}</h1>
     <Counter/>
     <Counter/>
     <Counter/>
