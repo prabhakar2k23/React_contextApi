@@ -1,8 +1,10 @@
+import { useContext } from 'react'
 import './App.css'
 import Counter from './components/Counter'
+import { CounterContext } from './context/Counter'
 
 function App() {
-  
+  const counterState = useContext(CounterContext);
   return (
     <>
     <h1>Count 0</h1>
