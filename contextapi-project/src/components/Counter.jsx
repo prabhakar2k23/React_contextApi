@@ -8,7 +8,13 @@ const Counter = () => {
     <>
         <div>
             <button onClick={()=>counterContext.setCount(counterContext.count+1)}>Increment</button>
-            <button onClick={()=>counterContext.setCount(counterContext.count-1)}>Decrement</button>
+            <button 
+          onClick={() => {
+            if (counterContext.count > 0) {
+              counterContext.setCount(counterContext.count - 1);
+            }
+          }}
+        >Decrement</button>
         </div>
     </>
   )
